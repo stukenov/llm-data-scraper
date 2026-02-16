@@ -194,11 +194,25 @@ llm-data-scraper/
 ├── parse_sitemaps.py       # Sitemap parsers
 ├── sitemap_processor.py    # XML processing utilities
 ├── utils.py                # Helper functions
+├── extras/                 # Additional utilities (see below)
 ├── requirements.txt        # Python dependencies
 ├── .gitignore             # Git ignore rules
 ├── LICENSE                # MIT License
 └── README.md              # This file
 ```
+
+### Extras Directory
+
+The `extras/` directory contains additional standalone scraping and preprocessing tools:
+
+- **scrap-every-file.py**: Batch scraper that reads URLs from a CSV file and extracts content from `<div id="content">` elements
+- **small-scraper.py**: Simple scraper for extracting article links from Eurosport Football pages
+- **parse.py**: Generic news parser with BeautifulSoup for extracting `<article>` tags
+- **get-wiki-data.py**: Wikipedia data extractor using the Wikipedia API
+- **convert-books.py**: Book format converter (PDF/EPUB to TXT) with text cleaning for Kazakh language
+- **convert.py**: Video-to-audio converter using FFmpeg (requires external utils module)
+
+These tools are provided as standalone utilities and may require additional dependencies not listed in the main requirements.txt.
 
 ### Adding New Features
 
